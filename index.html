@@ -1,15 +1,32 @@
-<form id="form">
-  <div class="field">
-    <label for="reply_to">reply_to</label>
-    <input type="text" name="reply_to" id="reply_to">
-  </div>
+<!DOCTYPE html>
+<html>
 
-  <input type="submit" id="button" value="Send Email" >
-</form>
+<body style="text-align:center;">
+	<h1 style="color:green;">
+			GeeksforGeeks
+	</h1>
+	<h2>Text value property</h2>
+	<p>
+		Change the text of the text field,
+		and then click the button below.
+	</p>
 
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	Name:<input type="text" id="myText" value="Enteremail">
+	<button type="button" onclick="myFunction()">Try it</button>
+	<p id="demo"></p>
 
-<script type="text/javascript">
-  emailjs.init('cyVTMbfQ0BHccBLD9')
-</script>
+	
+	<script>
+	
+	// Here the value is stored in new variable x
+	function myFunction() {
+		var x = document.getElementById("myText").value;
+    emailjs.send("service_z7v0frh","template_1cqpfhb",{
+reply_to: x,
+});
+	}
+	</script>
+</body>
+
+</html>
+
