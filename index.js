@@ -11,7 +11,7 @@ document.getElementById('form')
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
+      btn.value = 'Send Message';
       alert('Sent!');
     }, (err) => {
       btn.value = 'Send Email';
